@@ -12,7 +12,35 @@
 		AEBA90AA1FF6A98E003EA2BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBA90A81FF6A98E003EA2BA /* Main.storyboard */; };
 		AEBA90AC1FF6A98E003EA2BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBA90AB1FF6A98E003EA2BA /* Assets.xcassets */; };
 		AEBA90AF1FF6A98E003EA2BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBA90AD1FF6A98E003EA2BA /* LaunchScreen.storyboard */; };
+		AEBA90C01FF6AD86003EA2BA /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90B71FF6AD02003EA2BA /* APIKit.framework */; };
+		AEBA90C11FF6AD86003EA2BA /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90B71FF6AD02003EA2BA /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEBA90C21FF6AD86003EA2BA /* BittrexKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90B81FF6AD02003EA2BA /* BittrexKit.framework */; };
+		AEBA90C31FF6AD86003EA2BA /* BittrexKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90B81FF6AD02003EA2BA /* BittrexKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEBA90C41FF6AD86003EA2BA /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90B91FF6AD02003EA2BA /* CommonCrypto.framework */; };
+		AEBA90C51FF6AD86003EA2BA /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90B91FF6AD02003EA2BA /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEBA90C61FF6AD86003EA2BA /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90BA1FF6AD02003EA2BA /* Crypto.framework */; };
+		AEBA90C71FF6AD86003EA2BA /* Crypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90BA1FF6AD02003EA2BA /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEBA90C81FF6AD86003EA2BA /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90B61FF6AD02003EA2BA /* Result.framework */; };
+		AEBA90C91FF6AD86003EA2BA /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90B61FF6AD02003EA2BA /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AEBA90CA1FF6AD86003EA2BA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AEBA90C31FF6AD86003EA2BA /* BittrexKit.framework in Embed Frameworks */,
+				AEBA90C71FF6AD86003EA2BA /* Crypto.framework in Embed Frameworks */,
+				AEBA90C91FF6AD86003EA2BA /* Result.framework in Embed Frameworks */,
+				AEBA90C51FF6AD86003EA2BA /* CommonCrypto.framework in Embed Frameworks */,
+				AEBA90C11FF6AD86003EA2BA /* APIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AEBA90A11FF6A98E003EA2BA /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +50,11 @@
 		AEBA90AB1FF6A98E003EA2BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEBA90AE1FF6A98E003EA2BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEBA90B01FF6A98E003EA2BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEBA90B61FF6AD02003EA2BA /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		AEBA90B71FF6AD02003EA2BA /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		AEBA90B81FF6AD02003EA2BA /* BittrexKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BittrexKit.framework; path = Carthage/Build/iOS/BittrexKit.framework; sourceTree = "<group>"; };
+		AEBA90B91FF6AD02003EA2BA /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		AEBA90BA1FF6AD02003EA2BA /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +62,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBA90C21FF6AD86003EA2BA /* BittrexKit.framework in Frameworks */,
+				AEBA90C61FF6AD86003EA2BA /* Crypto.framework in Frameworks */,
+				AEBA90C81FF6AD86003EA2BA /* Result.framework in Frameworks */,
+				AEBA90C41FF6AD86003EA2BA /* CommonCrypto.framework in Frameworks */,
+				AEBA90C01FF6AD86003EA2BA /* APIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +76,11 @@
 		AEBA90981FF6A98E003EA2BA = {
 			isa = PBXGroup;
 			children = (
+				AEBA90B71FF6AD02003EA2BA /* APIKit.framework */,
+				AEBA90B81FF6AD02003EA2BA /* BittrexKit.framework */,
+				AEBA90B91FF6AD02003EA2BA /* CommonCrypto.framework */,
+				AEBA90BA1FF6AD02003EA2BA /* Crypto.framework */,
+				AEBA90B61FF6AD02003EA2BA /* Result.framework */,
 				AEBA90A31FF6A98E003EA2BA /* Example */,
 				AEBA90A21FF6A98E003EA2BA /* Products */,
 			);
@@ -74,6 +117,7 @@
 				AEBA909D1FF6A98E003EA2BA /* Sources */,
 				AEBA909E1FF6A98E003EA2BA /* Frameworks */,
 				AEBA909F1FF6A98E003EA2BA /* Resources */,
+				AEBA90CA1FF6AD86003EA2BA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -276,6 +320,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LG8FQ3AXT3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yuzushioh.Example;
@@ -291,6 +339,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LG8FQ3AXT3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yuzushioh.Example;

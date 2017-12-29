@@ -1,0 +1,5 @@
+github "antitypical/Result" "3.2.4"
+github "ishkawa/APIKit" "3.2.0"
+github "soffes/CommonCrypto" "v1.1.0"
+github "soffes/Crypto" "v0.5.4"
+github "yuzushioh/BittrexKit" "alpha-0.0.1"
