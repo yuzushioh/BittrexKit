@@ -1,1 +1,1 @@
-# BittrexKit
+# swift-bittrex
