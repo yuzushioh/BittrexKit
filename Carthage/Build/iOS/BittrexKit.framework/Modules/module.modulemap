@@ -1,0 +1,4 @@
+framework module BittrexKit {
+    header "BittrexKit-Swift.h"
+    requires objc
+}

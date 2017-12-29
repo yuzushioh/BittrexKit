@@ -1,0 +1,27 @@
+{
+  "Mac" : [
+    {
+      "name" : "Crypto",
+      "hash" : "9d336857f1a3b39818e2a7e80069c9e616e232c121cfbe824298c8f74485142d"
+    }
+  ],
+  "watchOS" : [
+    {
+      "name" : "Crypto",
+      "hash" : "2240e5f70586335b5fab431ca201511ddeae885fa6e9751d3b83ffe979300f37"
+    }
+  ],
+  "tvOS" : [
+    {
+      "name" : "Crypto",
+      "hash" : "cc2be03e6d8495f56bf9de60c7a5c5a261777fa08171782c565b4c842f7e94e5"
+    }
+  ],
+  "commitish" : "v0.5.4",
+  "iOS" : [
+    {
+      "name" : "Crypto",
+      "hash" : "0bc6cbed6af068a6ec39a61a42ff510d9b4615c0ea078beb31caaba371e47694"
+    }
+  ]
+}

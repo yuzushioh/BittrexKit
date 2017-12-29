@@ -1,0 +1,27 @@
+{
+  "Mac" : [
+    {
+      "name" : "APIKit",
+      "hash" : "e66053b155c2ca57f13b127344e2978e7f45215eb0c41668555c949dd12706a9"
+    }
+  ],
+  "watchOS" : [
+    {
+      "name" : "APIKit",
+      "hash" : "008dba16ba7f31125cc1240b7d4fcc2ae7b5671028f779411f1a46382d57bb93"
+    }
+  ],
+  "tvOS" : [
+    {
+      "name" : "APIKit",
+      "hash" : "39699eafa9cca1ee34fd35631e213ce99a1ff7e56c4a0c19e5afe2d2a2d896f4"
+    }
+  ],
+  "commitish" : "3.2.0",
+  "iOS" : [
+    {
+      "name" : "APIKit",
+      "hash" : "513d06743422471d997abd7acdd7df3536ec582c23cff869c6e0ad12bf3977c6"
+    }
+  ]
+}
