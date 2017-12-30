@@ -15,22 +15,45 @@ bittrex.getBalances() { result in
       // handle any error
   }
 }
+
+bittrex.getTicker(market: "BTC-LTC") { result in
+  switch result {
+    case .success(let response):
+      // do something with ticker
+    case .failure(let error):
+      // handle any error
+  }
+}
 ```
 
 ## Supported API
 #### Public APIs
 ```swift
-
+public func getMarkets()
+public func getCurrencires()
+public func getTicker(market: String)
+public func getMarketSummaries()
+public func getMarketSummary(market: String)
+public func getOrderBook(market: String)
+public func getSellOrders(market: String)
+public func getBuyOrders(market: String)
+public func getMarketHistory(market: String)
 ```
 
 #### Account APIs
 ```swift
-
+public func getBalances()
+public func getBalance(currency: String)
+public func getDepositAddress(currency: String)
+public func withdraw(currency: String, quantity: Double, address: String)
 ```
 
 #### Market APIs
 ```swift
-
+public func buyLimit(market: String, quantity: Double, rate: Double)
+public func sellLimit(market: String, quantity: Double, rate: Double)
+public func cancel(uuid: String)
+public func getOpenOrders(market: String)
 ```
 
 ## Requirements
