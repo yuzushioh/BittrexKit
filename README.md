@@ -65,3 +65,6 @@ public func getOpenOrders(market: String)
 
 - Insert `github "yuzushioh/BittrexKit"` to your Cartfile.
 - Run `carthage update --platform ios`.
+
+## Contribution 
+Any pull requests are very welcome!
