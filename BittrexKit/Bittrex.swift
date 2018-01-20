@@ -115,7 +115,7 @@ extension Bittrex {
 }
 
 extension Bittrex {
-    fileprivate func send<Request: BittrexRequest>(_ request: Request, handler: @escaping (Result<Request.Response, APIKit.SessionTaskError>) -> Void) {
+    public func send<Request: BittrexRequest>(_ request: Request, handler: @escaping (Result<Request.Response, APIKit.SessionTaskError>) -> Void) {
         let httpRequest = HTTPRequest(request, auth: auth)
         Session.shared.send(httpRequest, handler: handler)
     }
