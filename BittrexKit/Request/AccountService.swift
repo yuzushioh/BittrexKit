@@ -8,80 +8,80 @@
 
 import APIKit
 
-final class AccountService {
-    struct GetBalances: BittrexRequest {
-        typealias Response = GetBalancesResponse
+public final class AccountService {
+    public struct GetBalances: BittrexRequest {
+        public typealias Response = GetBalancesResponse
         
-        let apiKey: String
-        let nonce: String
+        public let apiKey: String
+        public let nonce: String
         
-        var path: String {
+        public var path: String {
             return "/account/getbalances"
         }
         
-        var parameters: Any? {
+        public var parameters: Any? {
             return ["apikey": apiKey, "nonce": nonce]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return true
         }
     }
     
-    struct GetBalance: BittrexRequest {
-        typealias Response = GetBalanceResponse
+    public struct GetBalance: BittrexRequest {
+        public typealias Response = GetBalanceResponse
         
-        let currency: String
-        let apiKey: String
-        let nonce: String
+        public let currency: String
+        public let apiKey: String
+        public let nonce: String
         
-        var path: String {
+        public var path: String {
             return "/account/getbalance"
         }
         
-        var parameters: Any? {
+        public var parameters: Any? {
             return ["apikey": apiKey, "nonce": nonce, "currency": currency]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return true
         }
     }
     
-    struct GetDepositAddress: BittrexRequest {
-        typealias Response = GetDepositAddressResponse
+    public struct GetDepositAddress: BittrexRequest {
+        public typealias Response = GetDepositAddressResponse
         
-        let currency: String
-        let apiKey: String
-        let nonce: String
+        public let currency: String
+        public let apiKey: String
+        public let nonce: String
         
-        var path: String {
+        public var path: String {
             return "/account/getdepositaddress"
         }
         
-        var parameters: Any? {
+        public var parameters: Any? {
             return ["apikey": apiKey, "nonce": nonce, "currency": currency]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return true
         }
     }
     
-    struct Withdraw: BittrexRequest {
-        typealias Response = WithdrawResponse
+    public struct Withdraw: BittrexRequest {
+        public typealias Response = WithdrawResponse
         
-        let currency: String
-        let quantity: Double
-        let address: String
-        let apiKey: String
-        let nonce: String
+        public let currency: String
+        public let quantity: Double
+        public let address: String
+        public let apiKey: String
+        public let nonce: String
         
-        var path: String {
+        public var path: String {
             return "/account/withdraw"
         }
         
-        var parameters: Any? {
+        public var parameters: Any? {
             return [
                 "apikey": apiKey,
                 "nonce": nonce,
@@ -91,7 +91,7 @@ final class AccountService {
             ]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return true
         }
     }

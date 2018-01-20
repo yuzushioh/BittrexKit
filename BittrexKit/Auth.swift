@@ -6,8 +6,8 @@
 //  Copyright © 2017 yuzushioh. All rights reserved.
 //
 
-struct Auth {
-    let apiKey: String
-    let apiSecret: String
-    let nonce: String
+public struct Auth {
+    public let apiKey: String
+    public let apiSecret: String
+    public let nonce: String
 }

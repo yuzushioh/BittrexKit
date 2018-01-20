@@ -8,147 +8,147 @@
 
 import APIKit
 
-final class PublicService {
-    struct GetMarkets: BittrexRequest {
-        typealias Response = GetMarketsResponse
+public final class PublicService {
+    public struct GetMarkets: BittrexRequest {
+        public typealias Response = GetMarketsResponse
         
-        var path: String {
+        public var path: String {
             return "/public/getmarkets"
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return false
         }
     }
     
-    struct GetCurrencies: BittrexRequest {
-        typealias Response = GetCurrenciesResponse
+    public struct GetCurrencies: BittrexRequest {
+        public typealias Response = GetCurrenciesResponse
         
-        var path: String {
+        public var path: String {
             return "/public/getcurrencies"
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return false
         }
     }
     
-    struct GetTicker: BittrexRequest {
-        typealias Response = GetTickerResponse
+    public struct GetTicker: BittrexRequest {
+        public typealias Response = GetTickerResponse
         
-        let market: String
+        public let market: String
         
-        var path: String {
+        public var path: String {
             return "/public/getticker"
         }
         
-        var parameters: Any? {
+        public var parameters: Any? {
             return ["market": market]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return false
         }
     }
     
-    struct GetMarketSummaries: BittrexRequest {
-        typealias Response = GetMarketSummariesResponse
+    public struct GetMarketSummaries: BittrexRequest {
+        public typealias Response = GetMarketSummariesResponse
         
-        var path: String {
+        public var path: String {
             return "/public/getmarketsummaries"
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return false
         }
     }
     
-    struct GetMarketSummary: BittrexRequest {
-        typealias Response = GetMarketSummaryResponse
+    public struct GetMarketSummary: BittrexRequest {
+        public typealias Response = GetMarketSummaryResponse
         
-        let market: String
+        public let market: String
         
-        var path: String {
+        public var path: String {
             return "/public/getmarketsummary"
         }
         
-        var parameters: Any? {
+        public var parameters: Any? {
             return ["market": market]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return false
         }
     }
     
-    struct GetOrderBook: BittrexRequest {
-        typealias Response = GetOrderBookResponse
+    public struct GetOrderBook: BittrexRequest {
+        public typealias Response = GetOrderBookResponse
         
-        let market: String
+        public let market: String
         
-        var path: String {
+        public var path: String {
             return "/public/getorderbook"
         }
         
-        var parameters: Any? {
+        public var parameters: Any? {
             return ["market": market, "type": "both"]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return false
         }
     }
     
-    struct GetSellOrders: BittrexRequest {
-        typealias Response = GetOrdersResponse
+    public struct GetSellOrders: BittrexRequest {
+        public typealias Response = GetOrdersResponse
         
-        let market: String
+        public let market: String
         
-        var path: String {
+        public var path: String {
             return "/public/getorderbook"
         }
         
-        var parameters: Any? {
+        public var parameters: Any? {
             return ["market": market, "type": "sell"]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return false
         }
     }
     
-    struct GetBuyOrders: BittrexRequest {
-        typealias Response = GetOrdersResponse
+    public struct GetBuyOrders: BittrexRequest {
+        public typealias Response = GetOrdersResponse
         
-        let market: String
+        public let market: String
         
-        var path: String {
+        public var path: String {
             return "/public/getorderbook"
         }
         
-        var parameters: Any? {
+        public var parameters: Any? {
             return ["market": market, "type": "buy"]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return false
         }
     }
     
-    struct GetMarketHistory: BittrexRequest {
-        typealias Response = GetMarketHistoryResponse
+    public struct GetMarketHistory: BittrexRequest {
+        public typealias Response = GetMarketHistoryResponse
         
-        let market: String
+        public let market: String
         
-        var path: String {
+        public var path: String {
             return "/public/getmarkethistory"
         }
         
-        var parameters: Any? {
+        public var parameters: Any? {
             return ["market": market]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return false
         }
     }
