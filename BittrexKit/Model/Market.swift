@@ -13,7 +13,7 @@ public struct Market: Decodable {
     public let baseCurrency: String
     public let marketCurrencyLong: String
     public let baseCurrencyLong: String
-    public let logoURL: URL
+    public let logoURL: URL?
     public let minTradeSize: Double
     public let marketName: String
     public let isActive: Bool
