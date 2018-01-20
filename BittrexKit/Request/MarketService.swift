@@ -8,87 +8,99 @@
 
 import APIKit
 
-final class MarketService {
-    struct BuyLimit: BittrexRequest {
-        typealias Response = BuySellLimitResponse
+public final class MarketService {
+    public struct BuyLimit: BittrexRequest {
+        public typealias Response = BuySellLimitResponse
         
-        let market: String
-        let quantity: Double
-        let rate: Double
-        let apiKey: String
-        let nonce: String
+        public let market: String
+        public let quantity: Double
+        public let rate: Double
         
-        var path: String {
+        public init(market: String, quantity: Double, rate: Double) {
+            self.market = market
+            self.quantity = quantity
+            self.rate = rate
+        }
+        
+        public var path: String {
             return "/market/buylimit"
         }
         
-        var parameters: Any? {
-            return ["market": market, "quantity": quantity, "rate": rate, "apikey": apiKey, "nonce": nonce]
+        public var parameters: Any? {
+            return ["market": market, "quantity": quantity, "rate": rate]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return true
         }
     }
     
-    struct SellLimit: BittrexRequest {
-        typealias Response = BuySellLimitResponse
+    public struct SellLimit: BittrexRequest {
+        public typealias Response = BuySellLimitResponse
         
-        let market: String
-        let quantity: Double
-        let rate: Double
-        let apiKey: String
-        let nonce: String
+        public let market: String
+        public let quantity: Double
+        public let rate: Double
         
-        var path: String {
+        public init(market: String, quantity: Double, rate: Double) {
+            self.market = market
+            self.quantity = quantity
+            self.rate = rate
+        }
+        
+        public var path: String {
             return "/market/selllimit"
         }
         
-        var parameters: Any? {
-            return ["market": market, "quantity": quantity, "rate": rate, "apikey": apiKey, "nonce": nonce]
+        public var parameters: Any? {
+            return ["market": market, "quantity": quantity, "rate": rate]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return true
         }
     }
     
-    struct Cancel: BittrexRequest {
-        typealias Response = CancelResponse
+    public struct Cancel: BittrexRequest {
+        public typealias Response = CancelResponse
         
-        let uuid: String
-        let apiKey: String
-        let nonce: String
+        public let uuid: String
         
-        var path: String {
+        public init(uuid: String) {
+            self.uuid = uuid
+        }
+        
+        public var path: String {
             return "/market/cancel"
         }
         
-        var parameters: Any? {
-            return ["uuid": uuid, "apikey": apiKey, "nonce": nonce]
+        public var parameters: Any? {
+            return ["uuid": uuid]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return true
         }
     }
     
-    struct GetOpenOrders: BittrexRequest {
-        typealias Response = GetOpenOrdersResponse
+    public struct GetOpenOrders: BittrexRequest {
+        public typealias Response = GetOpenOrdersResponse
         
-        let market: String
-        let apiKey: String
-        let nonce: String
+        public let market: String
         
-        var path: String {
+        public init(market: String) {
+            self.market = market
+        }
+
+        public var path: String {
             return "/market/getopenorders"
         }
         
-        var parameters: Any? {
-            return ["market": market, "apikey": apiKey, "nonce": nonce]
+        public var parameters: Any? {
+            return ["market": market]
         }
         
-        var withAuth: Bool {
+        public var withAuth: Bool {
             return true
         }
     }

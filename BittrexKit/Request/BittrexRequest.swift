@@ -10,7 +10,7 @@ import Foundation
 import APIKit
 import Crypto
 
-protocol BittrexRequest: APIKit.Request {
+public protocol BittrexRequest: APIKit.Request {
     var withAuth: Bool { get }
 }
 
@@ -23,19 +23,19 @@ extension BittrexRequest {
         return "v1.1"
     }
     
-    var baseURL: URL {
+    public var baseURL: URL {
         return url
             .appendingPathComponent("/api")
             .appendingPathComponent("/\(apiVersion)")
     }
     
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         return .get
     }
 }
 
 extension BittrexRequest where Response: Decodable {
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
+    public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
         let data = try JSONSerialization.data(withJSONObject: object, options: [])
         return try JSONDecoder().decode(Response.self, from: data)
     }

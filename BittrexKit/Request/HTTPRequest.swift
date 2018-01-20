@@ -9,32 +9,47 @@
 import APIKit
 import Crypto
 
-struct HTTPRequest<Request: BittrexRequest>: APIKit.Request {
+public struct HTTPRequest<Request: BittrexRequest>: APIKit.Request {
     private let baseRequest: Request
     private let auth: Auth
+    private let nonce: String
     
-    init(_ baseRequest: Request, auth: Auth) {
+    public init(_ baseRequest: Request, auth: Auth, nonce: String) {
         self.baseRequest = baseRequest
         self.auth = auth
+        self.nonce = nonce
     }
     
-    var baseURL: URL {
+    public var baseURL: URL {
         return baseRequest.baseURL
     }
     
-    var path: String {
+    public var path: String {
         return baseRequest.path
     }
     
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         return .get
     }
     
-    var parameters: Any? {
-        return baseRequest.parameters
+    public var parameters: Any? {
+        var parameters: [String: Any]
+        if let originalParameters = baseRequest.parameters as? [String: Any] {
+            parameters = originalParameters
+        } else {
+            parameters = [:]
+        }
+        
+        if baseRequest.withAuth {
+            parameters["apikey"] = auth.apiKey
+            parameters["nonce"] = nonce
+        }
+        
+        print(parameters)
+        return parameters
     }
     
-    var headerFields: [String: String] {
+    public var headerFields: [String: String] {
         guard let uri = buildURI(), baseRequest.withAuth else {
             return [:]
         }
@@ -46,7 +61,7 @@ struct HTTPRequest<Request: BittrexRequest>: APIKit.Request {
         return ["apisign": sign]
     }
     
-    func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Request.Response {
+    public func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Request.Response {
         return try baseRequest.response(from: object, urlResponse: urlResponse)
     }
     
