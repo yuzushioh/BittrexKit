@@ -12,15 +12,10 @@ public final class AccountService {
     public struct GetBalances: BittrexRequest {
         public typealias Response = GetBalancesResponse
         
-        public let apiKey: String
-        public let nonce: String
+        public init() {}
         
         public var path: String {
             return "/account/getbalances"
-        }
-        
-        public var parameters: Any? {
-            return ["apikey": apiKey, "nonce": nonce]
         }
         
         public var withAuth: Bool {
@@ -32,15 +27,17 @@ public final class AccountService {
         public typealias Response = GetBalanceResponse
         
         public let currency: String
-        public let apiKey: String
-        public let nonce: String
+        
+        public init(currency: String) {
+            self.currency = currency
+        }
         
         public var path: String {
             return "/account/getbalance"
         }
         
         public var parameters: Any? {
-            return ["apikey": apiKey, "nonce": nonce, "currency": currency]
+            return ["currency": currency]
         }
         
         public var withAuth: Bool {
@@ -52,15 +49,17 @@ public final class AccountService {
         public typealias Response = GetDepositAddressResponse
         
         public let currency: String
-        public let apiKey: String
-        public let nonce: String
+        
+        public init(currency: String) {
+            self.currency = currency
+        }
         
         public var path: String {
             return "/account/getdepositaddress"
         }
         
         public var parameters: Any? {
-            return ["apikey": apiKey, "nonce": nonce, "currency": currency]
+            return ["currency": currency]
         }
         
         public var withAuth: Bool {
@@ -74,21 +73,19 @@ public final class AccountService {
         public let currency: String
         public let quantity: Double
         public let address: String
-        public let apiKey: String
-        public let nonce: String
+        
+        public init(currency: String, quantity: Double, address: String) {
+            self.currency = currency
+            self.quantity = quantity
+            self.address = address
+        }
         
         public var path: String {
             return "/account/withdraw"
         }
         
         public var parameters: Any? {
-            return [
-                "apikey": apiKey,
-                "nonce": nonce,
-                "currency": currency,
-                "quantity": quantity,
-                "address": address
-            ]
+            return ["currency": currency, "quantity": quantity, "address": address]
         }
         
         public var withAuth: Bool {

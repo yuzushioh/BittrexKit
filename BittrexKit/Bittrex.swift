@@ -13,9 +13,10 @@ import APIKit
 public final class Bittrex {
     
     private let auth: Auth
+    private let nonce: String
     
     public init(apiKey: String, apiSecret: String) {
-        let nonce = UUID().uuidString
+        nonce = UUID().uuidString
         auth = Auth(apiKey: apiKey, apiSecret: apiSecret, nonce: nonce)
     }
 }
@@ -71,22 +72,22 @@ extension Bittrex {
 // MARK: - Account Service
 extension Bittrex {
     public func getBalances(handler: @escaping (Result<GetBalancesResponse, APIKit.SessionTaskError>) -> Void) {
-        let request = AccountService.GetBalances(apiKey: auth.apiKey, nonce: auth.nonce)
+        let request = AccountService.GetBalances()
         send(request, handler: handler)
     }
     
     public func getBalance(currency: String, handler: @escaping (Result<GetBalanceResponse, APIKit.SessionTaskError>) -> Void) {
-        let request = AccountService.GetBalance(currency: currency, apiKey: auth.apiKey, nonce: auth.nonce)
+        let request = AccountService.GetBalance(currency: currency)
         send(request, handler: handler)
     }
     
     public func getDepositAddress(currency: String, handler: @escaping (Result<GetDepositAddressResponse, APIKit.SessionTaskError>) -> Void) {
-        let request = AccountService.GetDepositAddress(currency: currency, apiKey: auth.apiKey, nonce: auth.nonce)
+        let request = AccountService.GetDepositAddress(currency: currency)
         send(request, handler: handler)
     }
     
     public func withdraw(currency: String, quantity: Double, address: String, handler: @escaping (Result<WithdrawResponse, APIKit.SessionTaskError>) -> Void) {
-        let request = AccountService.Withdraw(currency: currency, quantity: quantity, address: address, apiKey: auth.apiKey, nonce: auth.nonce)
+        let request = AccountService.Withdraw(currency: currency, quantity: quantity, address: address)
         send(request, handler: handler)
     }
 }
@@ -94,29 +95,29 @@ extension Bittrex {
 // MARK: - Market Service
 extension Bittrex {
     public func buyLimit(market: String, quantity: Double, rate: Double, handler: @escaping (Result<BuySellLimitResponse, APIKit.SessionTaskError>) -> Void) {
-        let request = MarketService.BuyLimit(market: market, quantity: quantity, rate: rate, apiKey: auth.apiKey, nonce: auth.nonce)
+        let request = MarketService.BuyLimit(market: market, quantity: quantity, rate: rate)
         send(request, handler: handler)
     }
     
     public func sellLimit(market: String, quantity: Double, rate: Double, handler: @escaping (Result<BuySellLimitResponse, APIKit.SessionTaskError>) -> Void) {
-        let request = MarketService.SellLimit(market: market, quantity: quantity, rate: rate, apiKey: auth.apiKey, nonce: auth.nonce)
+        let request = MarketService.SellLimit(market: market, quantity: quantity, rate: rate)
         send(request, handler: handler)
     }
     
     public func cancel(uuid: String, handler: @escaping (Result<CancelResponse, APIKit.SessionTaskError>) -> Void) {
-        let request = MarketService.Cancel(uuid: uuid, apiKey: auth.apiKey, nonce: auth.nonce)
+        let request = MarketService.Cancel(uuid: uuid)
         send(request, handler: handler)
     }
     
     public func getOpenOrders(market: String, handler: @escaping (Result<GetOpenOrdersResponse, APIKit.SessionTaskError>) -> Void) {
-        let request = MarketService.GetOpenOrders(market: market, apiKey: auth.apiKey, nonce: auth.nonce)
+        let request = MarketService.GetOpenOrders(market: market)
         send(request, handler: handler)
     }
 }
 
 extension Bittrex {
     public func send<Request: BittrexRequest>(_ request: Request, handler: @escaping (Result<Request.Response, APIKit.SessionTaskError>) -> Void) {
-        let httpRequest = HTTPRequest(request, auth: auth)
+        let httpRequest = HTTPRequest(request, auth: auth, nonce: nonce)
         Session.shared.send(httpRequest, handler: handler)
     }
 }

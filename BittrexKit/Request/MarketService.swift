@@ -15,15 +15,19 @@ public final class MarketService {
         public let market: String
         public let quantity: Double
         public let rate: Double
-        public let apiKey: String
-        public let nonce: String
+        
+        public init(market: String, quantity: Double, rate: Double) {
+            self.market = market
+            self.quantity = quantity
+            self.rate = rate
+        }
         
         public var path: String {
             return "/market/buylimit"
         }
         
         public var parameters: Any? {
-            return ["market": market, "quantity": quantity, "rate": rate, "apikey": apiKey, "nonce": nonce]
+            return ["market": market, "quantity": quantity, "rate": rate]
         }
         
         public var withAuth: Bool {
@@ -37,15 +41,19 @@ public final class MarketService {
         public let market: String
         public let quantity: Double
         public let rate: Double
-        public let apiKey: String
-        public let nonce: String
+        
+        public init(market: String, quantity: Double, rate: Double) {
+            self.market = market
+            self.quantity = quantity
+            self.rate = rate
+        }
         
         public var path: String {
             return "/market/selllimit"
         }
         
         public var parameters: Any? {
-            return ["market": market, "quantity": quantity, "rate": rate, "apikey": apiKey, "nonce": nonce]
+            return ["market": market, "quantity": quantity, "rate": rate]
         }
         
         public var withAuth: Bool {
@@ -57,15 +65,17 @@ public final class MarketService {
         public typealias Response = CancelResponse
         
         public let uuid: String
-        public let apiKey: String
-        public let nonce: String
+        
+        public init(uuid: String) {
+            self.uuid = uuid
+        }
         
         public var path: String {
             return "/market/cancel"
         }
         
         public var parameters: Any? {
-            return ["uuid": uuid, "apikey": apiKey, "nonce": nonce]
+            return ["uuid": uuid]
         }
         
         public var withAuth: Bool {
@@ -77,15 +87,17 @@ public final class MarketService {
         public typealias Response = GetOpenOrdersResponse
         
         public let market: String
-        public let apiKey: String
-        public let nonce: String
         
+        public init(market: String) {
+            self.market = market
+        }
+
         public var path: String {
             return "/market/getopenorders"
         }
         
         public var parameters: Any? {
-            return ["market": market, "apikey": apiKey, "nonce": nonce]
+            return ["market": market]
         }
         
         public var withAuth: Bool {

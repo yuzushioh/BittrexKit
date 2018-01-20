@@ -12,10 +12,12 @@ import Crypto
 public struct HTTPRequest<Request: BittrexRequest>: APIKit.Request {
     private let baseRequest: Request
     private let auth: Auth
+    private let nonce: String
     
-    public init(_ baseRequest: Request, auth: Auth) {
+    public init(_ baseRequest: Request, auth: Auth, nonce: String) {
         self.baseRequest = baseRequest
         self.auth = auth
+        self.nonce = nonce
     }
     
     public var baseURL: URL {
@@ -31,7 +33,20 @@ public struct HTTPRequest<Request: BittrexRequest>: APIKit.Request {
     }
     
     public var parameters: Any? {
-        return baseRequest.parameters
+        var parameters: [String: Any]
+        if let originalParameters = baseRequest.parameters as? [String: Any] {
+            parameters = originalParameters
+        } else {
+            parameters = [:]
+        }
+        
+        if baseRequest.withAuth {
+            parameters["apikey"] = auth.apiKey
+            parameters["nonce"] = nonce
+        }
+        
+        print(parameters)
+        return parameters
     }
     
     public var headerFields: [String: String] {

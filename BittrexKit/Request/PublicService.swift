@@ -12,6 +12,8 @@ public final class PublicService {
     public struct GetMarkets: BittrexRequest {
         public typealias Response = GetMarketsResponse
         
+        public init() {}
+        
         public var path: String {
             return "/public/getmarkets"
         }
@@ -23,6 +25,8 @@ public final class PublicService {
     
     public struct GetCurrencies: BittrexRequest {
         public typealias Response = GetCurrenciesResponse
+        
+        public init() {}
         
         public var path: String {
             return "/public/getcurrencies"
@@ -37,6 +41,10 @@ public final class PublicService {
         public typealias Response = GetTickerResponse
         
         public let market: String
+        
+        public init(market: String) {
+            self.market = market
+        }
         
         public var path: String {
             return "/public/getticker"
@@ -54,6 +62,8 @@ public final class PublicService {
     public struct GetMarketSummaries: BittrexRequest {
         public typealias Response = GetMarketSummariesResponse
         
+        public init() {}
+        
         public var path: String {
             return "/public/getmarketsummaries"
         }
@@ -67,6 +77,10 @@ public final class PublicService {
         public typealias Response = GetMarketSummaryResponse
         
         public let market: String
+        
+        public init(market: String) {
+            self.market = market
+        }
         
         public var path: String {
             return "/public/getmarketsummary"
@@ -86,6 +100,10 @@ public final class PublicService {
         
         public let market: String
         
+        public init(market: String) {
+            self.market = market
+        }
+        
         public var path: String {
             return "/public/getorderbook"
         }
@@ -103,6 +121,10 @@ public final class PublicService {
         public typealias Response = GetOrdersResponse
         
         public let market: String
+        
+        public init(market: String) {
+            self.market = market
+        }
         
         public var path: String {
             return "/public/getorderbook"
@@ -122,6 +144,10 @@ public final class PublicService {
         
         public let market: String
         
+        public init(market: String) {
+            self.market = market
+        }
+        
         public var path: String {
             return "/public/getorderbook"
         }
@@ -139,6 +165,10 @@ public final class PublicService {
         public typealias Response = GetMarketHistoryResponse
         
         public let market: String
+        
+        public init(market: String) {
+            self.market = market
+        }
         
         public var path: String {
             return "/public/getmarkethistory"
