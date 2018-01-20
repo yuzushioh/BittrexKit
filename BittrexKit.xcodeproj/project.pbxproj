@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE1436AD2013BE4700F9CA10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1436AC2013BE4700F9CA10 /* AppDelegate.swift */; };
+		AE1436AF2013BE4700F9CA10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1436AE2013BE4700F9CA10 /* ViewController.swift */; };
+		AE1436B22013BE4700F9CA10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1436B02013BE4700F9CA10 /* Main.storyboard */; };
+		AE1436B42013BE4700F9CA10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1436B32013BE4700F9CA10 /* Assets.xcassets */; };
+		AE1436B72013BE4700F9CA10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1436B52013BE4700F9CA10 /* LaunchScreen.storyboard */; };
+		AE1436BC2013BE5800F9CA10 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90431FF53BC9003EA2BA /* APIKit.framework */; };
+		AE1436BD2013BE5800F9CA10 /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90431FF53BC9003EA2BA /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE1436BE2013BE5800F9CA10 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90421FF53BC9003EA2BA /* CommonCrypto.framework */; };
+		AE1436BF2013BE5800F9CA10 /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90421FF53BC9003EA2BA /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE1436C02013BE5800F9CA10 /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90411FF53BC9003EA2BA /* Crypto.framework */; };
+		AE1436C12013BE5800F9CA10 /* Crypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90411FF53BC9003EA2BA /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE1436C22013BE5800F9CA10 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90441FF53BC9003EA2BA /* Result.framework */; };
+		AE1436C32013BE5800F9CA10 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90441FF53BC9003EA2BA /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE1436C52013BE5E00F9CA10 /* BittrexKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90361FF5399C003EA2BA /* BittrexKit.framework */; };
+		AE1436C62013BE5E00F9CA10 /* BittrexKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90361FF5399C003EA2BA /* BittrexKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEBA903B1FF5399C003EA2BA /* swift_bittrex.h in Headers */ = {isa = PBXBuildFile; fileRef = AEBA90391FF5399C003EA2BA /* swift_bittrex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEBA90451FF53BC9003EA2BA /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90411FF53BC9003EA2BA /* Crypto.framework */; };
 		AEBA90461FF53BC9003EA2BA /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBA90421FF53BC9003EA2BA /* CommonCrypto.framework */; };
@@ -30,7 +45,42 @@
 		AEBA90971FF697A0003EA2BA /* MarketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA90961FF697A0003EA2BA /* MarketService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AE1436C72013BE5E00F9CA10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEBA902D1FF5399C003EA2BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEBA90351FF5399C003EA2BA;
+			remoteInfo = BittrexKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AE1436C42013BE5800F9CA10 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AE1436C62013BE5E00F9CA10 /* BittrexKit.framework in Embed Frameworks */,
+				AE1436C12013BE5800F9CA10 /* Crypto.framework in Embed Frameworks */,
+				AE1436BF2013BE5800F9CA10 /* CommonCrypto.framework in Embed Frameworks */,
+				AE1436BD2013BE5800F9CA10 /* APIKit.framework in Embed Frameworks */,
+				AE1436C32013BE5800F9CA10 /* Result.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AE1436AA2013BE4700F9CA10 /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1436AC2013BE4700F9CA10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE1436AE2013BE4700F9CA10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE1436B12013BE4700F9CA10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE1436B32013BE4700F9CA10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE1436B62013BE4700F9CA10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE1436B82013BE4700F9CA10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBA90361FF5399C003EA2BA /* BittrexKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BittrexKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBA90391FF5399C003EA2BA /* swift_bittrex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swift_bittrex.h; sourceTree = "<group>"; };
 		AEBA903A1FF5399C003EA2BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +107,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AE1436A72013BE4700F9CA10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE1436C52013BE5E00F9CA10 /* BittrexKit.framework in Frameworks */,
+				AE1436C02013BE5800F9CA10 /* Crypto.framework in Frameworks */,
+				AE1436BE2013BE5800F9CA10 /* CommonCrypto.framework in Frameworks */,
+				AE1436BC2013BE5800F9CA10 /* APIKit.framework in Frameworks */,
+				AE1436C22013BE5800F9CA10 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEBA90321FF5399C003EA2BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,6 +133,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE1436AB2013BE4700F9CA10 /* TestProject */ = {
+			isa = PBXGroup;
+			children = (
+				AE1436AC2013BE4700F9CA10 /* AppDelegate.swift */,
+				AE1436AE2013BE4700F9CA10 /* ViewController.swift */,
+				AE1436B02013BE4700F9CA10 /* Main.storyboard */,
+				AE1436B32013BE4700F9CA10 /* Assets.xcassets */,
+				AE1436B52013BE4700F9CA10 /* LaunchScreen.storyboard */,
+				AE1436B82013BE4700F9CA10 /* Info.plist */,
+			);
+			path = TestProject;
+			sourceTree = "<group>";
+		};
 		AEBA902C1FF5399C003EA2BA = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +154,7 @@
 				AEBA90411FF53BC9003EA2BA /* Crypto.framework */,
 				AEBA90441FF53BC9003EA2BA /* Result.framework */,
 				AEBA90381FF5399C003EA2BA /* BittrexKit */,
+				AE1436AB2013BE4700F9CA10 /* TestProject */,
 				AEBA90371FF5399C003EA2BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				AEBA90361FF5399C003EA2BA /* BittrexKit.framework */,
+				AE1436AA2013BE4700F9CA10 /* TestProject.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +223,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		AE1436A92013BE4700F9CA10 /* TestProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE1436BB2013BE4700F9CA10 /* Build configuration list for PBXNativeTarget "TestProject" */;
+			buildPhases = (
+				AE1436A62013BE4700F9CA10 /* Sources */,
+				AE1436A72013BE4700F9CA10 /* Frameworks */,
+				AE1436A82013BE4700F9CA10 /* Resources */,
+				AE1436C42013BE5800F9CA10 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE1436C82013BE5E00F9CA10 /* PBXTargetDependency */,
+			);
+			name = TestProject;
+			productName = TestProject;
+			productReference = AE1436AA2013BE4700F9CA10 /* TestProject.app */;
+			productType = "com.apple.product-type.application";
+		};
 		AEBA90351FF5399C003EA2BA /* BittrexKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEBA903E1FF5399C003EA2BA /* Build configuration list for PBXNativeTarget "BittrexKit" */;
@@ -174,6 +270,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = yuzushioh;
 				TargetAttributes = {
+					AE1436A92013BE4700F9CA10 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					AEBA90351FF5399C003EA2BA = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -195,11 +295,22 @@
 			projectRoot = "";
 			targets = (
 				AEBA90351FF5399C003EA2BA /* BittrexKit */,
+				AE1436A92013BE4700F9CA10 /* TestProject */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AE1436A82013BE4700F9CA10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE1436B72013BE4700F9CA10 /* LaunchScreen.storyboard in Resources */,
+				AE1436B42013BE4700F9CA10 /* Assets.xcassets in Resources */,
+				AE1436B22013BE4700F9CA10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEBA90341FF5399C003EA2BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +321,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AE1436A62013BE4700F9CA10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE1436AF2013BE4700F9CA10 /* ViewController.swift in Sources */,
+				AE1436AD2013BE4700F9CA10 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AEBA90311FF5399C003EA2BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,7 +355,76 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AE1436C82013BE5E00F9CA10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEBA90351FF5399C003EA2BA /* BittrexKit */;
+			targetProxy = AE1436C72013BE5E00F9CA10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE1436B02013BE4700F9CA10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE1436B12013BE4700F9CA10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE1436B52013BE4700F9CA10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE1436B62013BE4700F9CA10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		AE1436B92013BE4700F9CA10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG8FQ3AXT3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = TestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuzushioh.TestProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE1436BA2013BE4700F9CA10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG8FQ3AXT3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = TestProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yuzushioh.TestProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		AEBA903C1FF5399C003EA2BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -407,6 +596,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AE1436BB2013BE4700F9CA10 /* Build configuration list for PBXNativeTarget "TestProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE1436B92013BE4700F9CA10 /* Debug */,
+				AE1436BA2013BE4700F9CA10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AEBA90301FF5399C003EA2BA /* Build configuration list for PBXProject "BittrexKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
