@@ -5,7 +5,7 @@ It supports all the APIs provided 🎉
 
 ```swift
 // You need to provide apiKey and apiSecret right now even to call public APIs.
-let bittrex = BittrexKit(apiKey: "API_KEY", apiSecret: "API_SECRET")
+let bittrex = Bittrex(apiKey: "API_KEY", apiSecret: "API_SECRET")
 
 bittrex.getBalances() { result in
   switch result {
