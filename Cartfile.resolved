@@ -1,4 +1,4 @@
 github "antitypical/Result" "3.2.4"
-github "ishkawa/APIKit" "3.2.0"
+github "ishkawa/APIKit" "3.2.1"
 github "soffes/CommonCrypto" "v1.1.0"
 github "soffes/Crypto" "v0.5.4"
