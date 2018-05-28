@@ -113,7 +113,7 @@ public struct BuySellLimitResponse: Decodable {
     }
     
     public let message: String
-    public let success: String
+    public let success: Bool
     public let response: Response
     
     public enum CodingKeys: String, CodingKey {
