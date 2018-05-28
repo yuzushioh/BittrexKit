@@ -107,14 +107,19 @@ public final class MarketService {
 }
 
 public struct BuySellLimitResponse: Decodable {
+    
+    public struct Response: Decodable {
+        public let uuid: String
+    }
+    
     public let message: String
-    public let uuid: String
     public let success: String
+    public let response: Response
     
     public enum CodingKeys: String, CodingKey {
         case message
-        case uuid = "result, uuid"
         case success
+        case response = "result"
     }
 }
 
