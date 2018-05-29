@@ -118,7 +118,7 @@ public struct BuySellLimitResponse: Decodable {
     
     public let message: String
     public let success: Bool
-    public let uuid: String
+    public let uuid: String?
     
     public enum CodingKeys: String, CodingKey {
         case message
@@ -131,8 +131,8 @@ public struct BuySellLimitResponse: Decodable {
         message = try container.decode(String.self, forKey: .message)
         success = try container.decode(Bool.self, forKey: .success)
         
-        let response = try container.decode(Response.self, forKey: .response)
-        uuid = response.uuid
+        let response = try container.decodeIfPresent(Response.self, forKey: .response)
+        uuid = response?.uuid
     }
 }
 
